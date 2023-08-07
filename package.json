@@ -1,0 +1,19 @@
+{
+  "name": "salable-trello-js",
+  "version": "1.0.0",
+  "description": "The simplest way to build a Trello power-up with Salable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salable/salable-trello-js.git"
+  },
+  "author": "Luke Glazebrook <Glazy@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salable/salable-trello-js/issues"
+  },
+  "homepage": "https://github.com/salable/salable-trello-js#readme"
+}
