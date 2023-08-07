@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server",
     "prepare": "husky install"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/salable/salable-trello-js#readme",
   "devDependencies": {
+    "http-server": "^14.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.1"
