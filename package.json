@@ -4,7 +4,8 @@
   "description": "The simplest way to build a Trello power-up with Salable",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/salable/salable-trello-js/issues"
   },
-  "homepage": "https://github.com/salable/salable-trello-js#readme"
+  "homepage": "https://github.com/salable/salable-trello-js#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "3.0.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
 }
