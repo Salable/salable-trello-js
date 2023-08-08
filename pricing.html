@@ -1,0 +1,30 @@
+
+<div id="pricing-table"></div>
+       
+<script src="https://p.trellocdn.com/power-up.min.js"></script>
+<script type="module">
+  import {SalablePricingTable} from "https://cdn.salable.app/latest/index.js";
+  (async () => {
+    const t = TrelloPowerUp.iframe()
+    const salable = new SalablePricingTable(
+      {
+        pricingTableNode: document.querySelector('#pricing-table'),
+        productUuid: 'YOUR_PRODUCT_UUID_HERE',
+        apiKey: 'YOUR_API_KEY_HERE',
+        globalPlanOptions: {
+          granteeId: t.arg('member'),
+          successUrl: '/success.html',
+          cancelUrl: '/cancel.html'
+        },
+        theme: 'light'
+      },
+      {
+        member: t.arg('member'),
+        customer: {
+          email: null,
+        },
+      }
+    );
+    await salable.init();
+  })();
+</script>
