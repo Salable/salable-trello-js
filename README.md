@@ -1,4 +1,5 @@
-<!-- Awaiting banner image to slot in here. -->
+![image](https://github.com/Salable/salable-trello-js/assets/8593744/c84cc85b-af89-4b52-9a5d-3e2cc46a8d6a)
+
 
 ## What am I looking at?
 
