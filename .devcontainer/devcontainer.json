@@ -1,4 +1,4 @@
 {
-    "name": "Your Codespace Name",
-    "postCreateCommand": "yarn && node embed-env.js && yarn run dev'"
+    "name": "Salable Trello Codespace",
+    "postCreateCommand": "yarn && node embed-env.js && yarn run dev"
 }
