@@ -1,21 +1,34 @@
 const fs = require('fs')
 const path = require('path')
 
-function swapEnvInFile(env, filePath) {
+function swapEnvInFile(envs, filePath) {
   fs.readFile(filePath, 'utf8', function (err, data) {
-    if (err) {
-      return console.log(err)
+    let result = data
+    for (envIter in envs) {
+      const env = envs[envIter]
+      console.log(env)
+      if (err) {
+        return console.log(err)
+      }
+      // Your blocks of text
+      const originalText = env
+      const replacementText = process.env[env] ? process.env[env] : ''
+
+      console.log(
+        'replacing ' +
+          originalText +
+          ' with ' +
+          replacementText +
+          ' in ' +
+          filePath,
+      )
+
+      // Replace the content
+      result = result.replace(new RegExp(originalText, 'g'), replacementText)
     }
-
-    // Your blocks of text
-    const originalText = env
-    const replacementText = process.env[env]
-
-    // Replace the content
-    const result = data.replace(new RegExp(originalText, 'g'), replacementText)
-
+    console.log(result)
     // Write the file back
-    fs.writeFile(path, result, 'utf8', function (err) {
+    fs.writeFile(filePath, result, 'utf8', function (err) {
       if (err) return console.log(err)
     })
   })
@@ -25,7 +38,7 @@ function processFile(filePath) {
   // Your processing logic here
   console.log('Processing:', filePath)
   const envs = ['TRELLO_API_KEY', 'SALABLE_API_KEY', 'SALABLE_PRODUCT_UUID']
-  for (const env in envs) swapEnvInFile(env, filePath)
+  swapEnvInFile(envs, filePath)
 }
 
 function walkDirectory(directory, callback) {
@@ -46,7 +59,7 @@ function walkDirectory(directory, callback) {
           walkDirectory(fullPath, callback)
         } else if (stats.isFile() && fullPath.endsWith('.html')) {
           callback(fullPath)
-        } else if (directory.endsWith('/js') || directory.endsWith('\\js')) {
+        } else if (fullPath.endsWith('.json')) {
           callback(fullPath)
         }
       })
@@ -56,3 +69,4 @@ function walkDirectory(directory, callback) {
 
 // Process .html files in the current directory and all files in 'js' subfolder
 walkDirectory('.', processFile)
+walkDirectory('./js', processFile)
