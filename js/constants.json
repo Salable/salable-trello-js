@@ -1,0 +1,6 @@
+{
+    "trelloApiKey" : "TRELLO_API_KEY",
+    "salableApiKey" : "SALABLE_API_KEY",
+    "salableProductUUID" : "SALABLE_PRODUCT_UUID"
+
+}
