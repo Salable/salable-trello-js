@@ -25,3 +25,10 @@ and monetise it however you would like.
 1. Add your Salable API key and product UUID to the `pricing.html` config.
 1. Add your Trello API key to the `script` in `index.html`.
 1. Build and monetise your idea!
+
+On the Salable dashboard side you will need to do the following:
+
+1. [Create a Salable account](https://salable.app/signup) if you don't already have one.
+2. Create a new product. You can call this whatever you want.
+3. Add a `Delete` capability to the product you just created.
+4. Create a plan, priced however you like, that gives the user the `Delete` capability you created in the previous step.
