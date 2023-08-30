@@ -20,6 +20,8 @@ and monetise it however you would like.
 
 ## How do I get started?
 
+1. [Create a Salable account](https://salable.app/signup) if you don't already have one.
+1. [Create an API key](https://salable.app/settings/api-keys).
 1. Clone this repository.
 1. Replace the API key on line 20 of `js/client.js` with your Salable API key.
 1. Add your Salable API key and product UUID to the `pricing.html` config.
@@ -28,7 +30,6 @@ and monetise it however you would like.
 
 On the Salable dashboard side you will need to do the following:
 
-1. [Create a Salable account](https://salable.app/signup) if you don't already have one.
-2. Create a new product. You can call this whatever you want.
-3. Add a `Delete` capability to the product you just created.
-4. Create a plan, priced however you like, that gives the user the `Delete` capability you created in the previous step.
+1. Create a new product. You can call this whatever you want.
+1. Add a `Delete` capability to the product you just created.
+1. Create a plan, priced however you like, that gives the user the `Delete` capability you created in the previous step.
