@@ -20,6 +20,7 @@ and monetise it however you would like.
 
 ## How do I get started?
 
+1. Create a Power-Up on the [Trello Power-Up Admin](https://trello.com/power-ups/admin)
 1. [Create a Salable account](https://salable.app/signup) if you don't already have one.
 1. [Create an API key](https://salable.app/settings/api-keys).
 1. Clone this repository.
