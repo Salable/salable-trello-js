@@ -20,8 +20,10 @@ and monetise it however you would like.
 
 ## How do I get started?
 
-1. Create a Power-Up on the [Trello Power-Up Admin](https://trello.com/power-ups/admin)
-1. [Create a Salable account](https://salable.app/signup) if you don't already have one.
+1. Create a Power-Up on the
+   [Trello Power-Up Admin](https://trello.com/power-ups/admin)
+1. [Create a Salable account](https://salable.app/signup) if you don't already
+   have one.
 1. [Create an API key](https://salable.app/settings/api-keys).
 1. Clone this repository.
 1. Replace the API key on line 20 of `js/client.js` with your Salable API key.
@@ -33,4 +35,24 @@ On the Salable dashboard side you will need to do the following:
 
 1. Create a new product. You can call this whatever you want.
 1. Add a `Delete` capability to the product you just created.
-1. Create a plan, priced however you like, that gives the user the `Delete` capability you created in the previous step.
+1. Create a plan, priced however you like, that gives the user the `Delete`
+   capability you created in the previous step.
+
+## Developing locally
+
+Developing the power-up on your local machine is often much easier than
+repeatedly deploying to some hosted environment such as GitHub Pages or Netlify.
+
+This can be done easily with tooling such as
+[localtunnel](https://localtunnel.me)!
+
+1. Install `localtunnel`
+1. Run `npm run dev` to start the template server
+1. Start `localtunnel`, specifying the same port: `lt --port 8080`
+1. Visit the URL provided to you by `localtunnel` in your browser of choice.
+1. Get your remote public IP and paste it into the input on your `localtunnel`
+   site. (`curl ipv4.icanhazip.com` is a simple way to get your current IP)
+1. Update the power-up URL and your "Allowed Origins" on the
+   [Power-Up Admin Portal](https://trello.com/power-ups/admin) to include your
+   new `localtunnel` address.
+1. Start developing!
