@@ -5,6 +5,10 @@
 You're looking at the easiest way to build and monetise a Trello power-up (with
 the help of the [Salable](https://salable.app)).
 
+To best utilise this boilerplate, you should have some experience with the
+basics of
+[Trello Power-Up development](https://developer.atlassian.com/cloud/trello/).
+
 ## How does it work?
 
 <!-- Possibly add image of "Delete Card" default power-up functionality? -->
