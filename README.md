@@ -63,3 +63,7 @@ This can be done easily with tooling such as
    [Power-Up Admin Portal](https://trello.com/power-ups/admin) to include your
    new `localtunnel` address.
 1. Start developing!
+
+## Guides
+
+- [Creating and monetising a Trello Power-Up using Salable!](https://www.salable.app/blogs/creating-and-monetising-a-trello-power-up-using-salable)
