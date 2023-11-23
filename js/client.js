@@ -10,7 +10,7 @@ TrelloPowerUp.initialize({
   'card-buttons': (t, options) => [
     {
       icon: '',
-      text: 'Delete',
+      text: 'Click Me! (Pro)',
       callback: async (t) => {
         const context = t.getContext()
         const response = await fetch(
@@ -21,19 +21,23 @@ TrelloPowerUp.initialize({
             },
           },
         )
-        const licenses = await response.json()
-        const hasALicense = licenses.some((license) =>
-          license.capabilities.some(
-            (capability) => capability.name === 'Delete',
-          ),
+        const licenses = response.status === 200 ? await response.json() : []
+        const hasALicense = licenses.some(
+          (license) =>
+            license.capabilities.some(
+              (capability) => capability.name === 'See Message',
+            ) && license.status === 'ACTIVE',
         )
 
         if (!hasALicense) {
           return t.alert({
-            message: 'You need a pro license to delete a card!',
+            message: 'You need a Pro license to see the message!',
           })
         }
 
+        t.alert({
+          message: 'Thank you for being a Pro license holder!',
+        })
         Trello.authorize({
           type: 'popup',
           name: 'Salable Trello JS',
@@ -42,14 +46,6 @@ TrelloPowerUp.initialize({
             write: 'true',
           },
           expiration: 'never',
-        })
-
-        t.hideCard()
-
-        Trello.delete(`cards/${context.card}`, {}, null, () => {
-          t.alert({
-            message: 'Failed to delete card, please try again...',
-          })
         })
       },
     },
