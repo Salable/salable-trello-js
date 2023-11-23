@@ -11,13 +11,11 @@ basics of
 
 ## How does it work?
 
-<!-- Possibly add image of "Delete Card" default power-up functionality? -->
-
-Contained in this repository is a fairly standard "Delete Card" Trello power-up.
-As it sounds, it allows you to delete individual cards by clicking a button in
-the card modal. However, this action is locked behind a "Pro" license. The user
-can acquire a license when the plugin is first enabled which will allow them to
-perform this action.
+Contained in this repository is a boilerplate Trello Power-Up that gives users
+with the `See Message` capability, the ability to click a button on a card and
+see a message. This functionality is intentionally basic so as to best show the
+core flow of working with Salable, whilst not overcomplicating the example with
+Trello specifics.
 
 This is all configurable so you can build whatever power-up you're thinking of
 and monetise it however you would like.
@@ -34,8 +32,8 @@ and monetise it however you would like.
    have one.
 1. [Create a Salable API key](https://salable.app/settings/api-keys).
 1. Create a new product on Salable. You can call this whatever you want.
-1. Add a `Delete` capability to the product you just created.
-1. Create a plan, priced however you like, that gives the user the `Delete`
+1. Add a `See Message` capability to the product you just created.
+1. Create a plan, priced however you like, that gives the user the `See Message`
    capability you created in the previous step.
 1. Clone this repository.
 1. Replace the API key on line 20 of `js/client.js` with your Salable API key.
