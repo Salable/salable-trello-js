@@ -1,3 +1,4 @@
+import { getUser } from 'https://www.unpkg.com/@salable/js@1.0.0/dist/index.js'
 console.log('Salable Trello JS loaded...')
 
 TrelloPowerUp.initialize({
@@ -13,23 +14,13 @@ TrelloPowerUp.initialize({
       text: 'Click Me! (Pro)',
       callback: async (t) => {
         const context = t.getContext()
-        const response = await fetch(
-          `https://api.salable.app/licenses/granteeId/${context.member}`,
-          {
-            headers: {
-              'x-api-key': 'YOUR_API_KEY_HERE',
-            },
-          },
-        )
-        const licenses = response.status === 200 ? await response.json() : []
-        const hasALicense = licenses.some(
-          (license) =>
-            license.capabilities.some(
-              (capability) => capability.name === 'See Message',
-            ) && license.status === 'ACTIVE',
-        )
+        const { hasCapability } = await getUser({
+          productUuid: 'YOUR_PRODUCT_UUID',
+          apiKey: 'YOUR_API_KEY',
+          granteeId: context.member,
+        })
 
-        if (!hasALicense) {
+        if (!hasCapability('See Message')) {
           return t.alert({
             message: 'You need a Pro license to see the message!',
           })
@@ -38,6 +29,7 @@ TrelloPowerUp.initialize({
         t.alert({
           message: 'Thank you for being a Pro license holder!',
         })
+
         Trello.authorize({
           type: 'popup',
           name: 'Salable Trello JS',

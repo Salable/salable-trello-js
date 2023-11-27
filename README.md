@@ -36,7 +36,7 @@ and monetise it however you would like.
 1. Create a plan, priced however you like, that gives the user the `See Message`
    capability you created in the previous step.
 1. Clone this repository.
-1. Replace the API key on line 20 of `js/client.js` with your Salable API key.
+1. Add your Salable API Key and product UUID on lines 18/19 of `js/client.js`.
 1. Add your Salable API key and product UUID to the `pricing.html` config.
 1. Add your Trello API key to the `script` in `index.html`.
 1. Ensure you have added your new Power-Up to your Trello board.
