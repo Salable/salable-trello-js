@@ -42,6 +42,9 @@ and monetise it however you would like.
 1. Ensure you have added your new Power-Up to your Trello board.
 1. Build and monetise your idea!
 
+If you'd prefer a more in-depth introduction, refer to our
+[Creating and Monetising a Trello Power-Up Using Salable guide](https://docs.salable.app/guides/tutorials-and-guides/trello/creating-monetising-trello-power-using-salable/).
+
 ## Developing locally
 
 Developing the power-up on your local machine is often much easier than
