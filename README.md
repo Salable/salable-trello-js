@@ -1,3 +1,6 @@
+> [!WARNING]  
+> This starter kit is currently out of date and doesn't follow Salable best practices. We're actively in the process of updating it.
+
 ![Trello for Salable](https://github.com/Salable/salable-trello-js/assets/8593744/c714573e-823a-4ea8-8381-6b9411107969)
 
 ## What am I looking at?
